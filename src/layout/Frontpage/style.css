@@ -1,0 +1,81 @@
+  /* Header styles */
+  *{
+    background-color: red;
+  }
+  .frontpage header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+.frontpage .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.frontpage .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.frontpage .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation styles */
+.frontpage nav ul {
+    list-style: none;
+    display: flex;
+}
+.frontpage nav ul li {
+    margin-left: 20px;
+}
+.frontpage nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.frontpage nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Mobile menu button */
+.frontpage .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .frontpage  .menu-toggle {
+        display: block;
+    }
+    .frontpage  nav {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100% - 60px);
+        background-color: #333;
+        transition: left 0.3s ease;
+    }
+    .frontpage  nav.active {
+        left: 0;
+    }
+    .frontpage  nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .frontpage  nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Main content placeholder */
+.frontpage main {
+    padding: 20px;
+}
